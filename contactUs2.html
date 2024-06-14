@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Clothing Line Store</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffaeeff;
+    color: #333333;
+}
+nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    
+}
+nav a {
+    color: #333333;
+    text-decoration: underline;
+    padding: 8px 16px;
+    padding-bottom: 10px;
+    font-weight: bold;  
+    font-size: 20px;
+
+}
+nav a:hover {
+    color: #333333;
+    border: none;
+    font-size: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: 10px;
+    transition: padding-left 0.15s, padding-right 0.15s;
+    opacity: 0.8;
+    cursor: pointer;
+        footer {
+    color: #333333;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+    background-color: #fffaeeff;
+}
+}
+.footer-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.footer-nav a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+}
+section { 
+max-width: 600px; 
+margin: 0 auto; 
+padding: 20px; 
+} 
+
+label { 
+display: block; 
+margin-bottom: 5px; 
+color: #666666; 
+} 
+
+input[type="text"], 
+input[type="email"] { 
+width: 100%; 
+padding: 10px; 
+border: 1px solid #cccccc; 
+border-radius: 5px; 
+margin-bottom: 10px; 
+font-size: 16px; 
+} 
+
+input[type="submit"] { 
+background-color: green; 
+color: #ffffff; 
+padding: 10px 20px; 
+border: none; 
+border-radius: 5px; 
+font-size: 16px; 
+cursor: pointer; 
+} 
+
+input[type="submit"]:hover { 
+background-color: #228B22; 
+} 
+
+    </style>
+</head>
+<body>
+    <nav>
+        <nav>
+            <a href="aboutUs.html">ABOUT</a>
+            <a href="terms&Conditions.html">TERMS</a>
+            <a href="privacyPolicy.html">PRIVACY</a>
+            <a href="shop.html">SHOP</a>
+            <a href="login.html">LOGOUT</a>
+            
+        </nav>
+    </nav>
+    <main>
+        <section class="contact">
+            <h2>Get in Touch</h2>
+            <form action="submit_contact_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; FLOWR 2024. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>

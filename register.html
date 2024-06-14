@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register.css">
+    <title>FLOWR Sign Up</title>
+    
+    <script>
+        function validateForm() {
+            let firstName = document.forms["signUp-form"]["first_name"].value;
+            let lastName = document.forms["signUp-form"]["last_name"].value;
+            let email = document.forms["signUp-form"]["email"].value;
+            let password = document.forms["signUp-form"]["password"].value;
+            let nameRegex = /^[A-Za-z]+$/;
+            let emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+            let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$/;
+
+            if (!nameRegex.test(firstName)) {
+                alert("First Name must contain only letters.");
+                return false;
+            }
+            if (!nameRegex.test(lastName)) {
+                alert("Last Name must contain only letters.");
+                return false;
+            }
+            if (!emailRegex.test(email)) {
+                alert("Invalid email format.");
+                return false;
+            }
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one special character.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="signUp-container">
+        <form action="register.php" method="post" name="signUp-form" onsubmit="return validateForm()">
+            <div>
+                <label>First Name</label>
+                <input type="text" name="first_name" required>
+            </div>
+            <div>
+                <label>Last Name</label>
+                <input type="text" name="last_name" required>
+            </div>
+            <div>
+                <label>Email<span style="color:red">*</span></label>
+                <input type="email" name="email" required>
+            </div>
+            <div>
+                <label>Password<span style="color:red">*</span></label>
+                <input type="password" name="password" required>
+            </div>
+            <div>
+                <button type="submit" name="register" value="register">SIGN UP</button>
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; FLOWR 2024. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>
